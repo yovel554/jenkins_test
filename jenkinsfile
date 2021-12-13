@@ -17,7 +17,7 @@ pipeline {
 	}
 	stage('Test') {
 	   steps {
-	       echo 'yovelgever'
+	       sh 'apt install -y python3'
 	   }
 	}
 	stage('Deploy') {
