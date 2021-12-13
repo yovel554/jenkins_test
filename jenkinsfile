@@ -4,14 +4,14 @@ pipline {
 	stage('Build') {
 	   parallel {
 		stage('Build A') {
-		   steps {
-			echo 'Building A.."
-	 	   }
+		    steps {
+		        echo 'Building A.."
+	 	    }
 		}
 		stage('Build B') {
-		   steps {
-			 echo 'Building B..'
-		   }
+		    steps {
+		        echo 'Building B..'
+		    }
 		}
 	   }
 	}
