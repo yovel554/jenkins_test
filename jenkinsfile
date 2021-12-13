@@ -3,9 +3,11 @@ pipeline {
 
     stages {
         stage('Build') {
+	   parallel {
             steps {
                 echo 'Building'
             }
+           
         }
         stage('Test') {
             steps {
@@ -17,6 +19,7 @@ pipeline {
                 echo 'Deploying'
             }
         }
+}
     }
 }
 
