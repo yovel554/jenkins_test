@@ -17,7 +17,7 @@ pipline {
 	}
 	stage('Test') {
 	   steps {
-		sh 'pytest'
+	       echo 'yovelgever'
 	   }
 	}
 	stage('Deploy') {
