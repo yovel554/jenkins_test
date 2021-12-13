@@ -1,25 +1,30 @@
-pipeline {
-    agent any
-
-    stages {
-        stage('Build') {
+pipline {
+   agent { docker {image 'python:3.10.1-slim' } }
+   stages {
+	stage('Build') {
 	   parallel {
-            steps {
-                echo 'Building'
-            }  
-        
-        stage('Test') {
-            steps {
-                echo 'yovelgevergever'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying'
-            }
-        }
-}
-}
-    }
+		stage('Build A') {
+		   steps {
+			echo 'Building A.."
+	 	   }
+		}
+		stage('Build B') {
+		   steps {
+			 echo 'Building B..'
+		   }
+		}
+	   }
+	}
+	stage('Test') {
+	   steps {
+		sh 'pytest'
+	   }
+	}
+	stage('Deploy') {
+	   steps {
+	       echo 'Deploying...'
+	   }
+	}
+   }
 }
 
