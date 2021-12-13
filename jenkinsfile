@@ -5,7 +5,7 @@ pipline {
 	   parallel {
 		stage('Build A') {
 		    steps {
-		        echo 'Building A.."
+		        echo 'Building A..'
 	 	    }
 		}
 		stage('Build B') {
