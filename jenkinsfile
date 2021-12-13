@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'python3 tese_add.py'
+                echo 'yovelgever'
             }
         }
         stage('Deploy') {
