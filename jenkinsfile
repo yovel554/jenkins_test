@@ -1,16 +1,23 @@
-#!/usr/bin/python3
 pipeline {
-        agent any
-        stages {
-            stage('build') {
-                #steps {
-                   # sh 'python pip install -m pytest'
-                 #   }
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building'
+                python pip install pytest
                 }
-            stage ('Test'){
-                steps{
-                    sh 'pytest'
-                    sh 'echo gever'
+            }
+        stage('Test') {
+            steps {
+                sh 'pytest'
+            }
+        }
+            stage('Deploy') {
+                steps {
+                    echo 'Deploying'
                 }
-                }
-                }
+            }
+        }
+    }
+
