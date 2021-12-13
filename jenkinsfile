@@ -9,8 +9,8 @@ pipeline {
                 }
             stage ('Test'){
                 steps{
-                    sh 'python3 test_add.oy'
-                    sh 'echo gever'
+                     python3 test_add.py
+                     echo gever
                 }
                 }
                 }
