@@ -9,8 +9,8 @@ pipeline {
                 }
             stage ('Test'){
                 steps{
-                     python3 test_add.py
-                     echo gever
+                    sh 'python3 test_add.py'
+                    sh 'echo gever'
                 }
                 }
                 }
