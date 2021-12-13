@@ -6,9 +6,8 @@ pipeline {
 	   parallel {
             steps {
                 echo 'Building'
-            }
-           
-        }
+            }  
+        
         stage('Test') {
             steps {
                 echo 'yovelgevergever'
@@ -19,6 +18,7 @@ pipeline {
                 echo 'Deploying'
             }
         }
+}
 }
     }
 }
